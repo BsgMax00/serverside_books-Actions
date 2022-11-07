@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/serverside_books-Actions/bookserver.iml" filepath="$PROJECT_DIR$/serverside_books-Actions/bookserver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/serverside_books-Actions.iml" filepath="$PROJECT_DIR$/.idea/serverside_books-Actions.iml" />
-    </modules>
-  </component>
-</project>
