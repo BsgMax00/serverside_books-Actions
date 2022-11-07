@@ -1,0 +1,2 @@
+create sequence book_user_review_seq start with 1 increment by 1;
+create table book_user_review (id integer not null, date timestamp, review varchar(1024) not null, foreign key (book_id), foreign key (user_id), primary key (id);

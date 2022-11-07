@@ -39,6 +39,6 @@ public class Book {
 
 
     @ManyToMany(fetch = FetchType.LAZY)
-    private List<Author> authors;
+    List<Author> authors;
 }
 

@@ -100,6 +100,11 @@ export function BookViewPage() {
                 <BookDescription book={book}/>
                 <BookStar book={book}></BookStar>
             </div>
+
+            <div>
+
+            </div>
+
             <BookSameSerie book={book}/>
             <BookSameAuthors book={book}/>
             <NavButtonBar>

@@ -1,5 +1,17 @@
 -- noinspection SqlNoDataSourceInspectionForFile
 
+INSERT INTO BOOKSUSER (ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'admin',
+        '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS', 'ADMIN'); --admin
+
+INSERT INTO BOOKSUSER (ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'marie',
+        '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm', 'USER'); --password
+
+INSERT INTO BOOKSUSER (ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'vera',
+        '$2y$12$KF3spKP4kgf59.6zYkmjyeYaW2.4ZxV16Grpw1FPsFnzYq68kswJ6', 'USER'); --vera
+
 insert into BOOK (ID, TITLE, NR_STARS)
 values (nextval('BOOK_SEQ'), 'Oryx and Crake', 1); /*1*/
 
@@ -24,9 +36,6 @@ values (nextval('SERIE_SEQ'), 'Programming series');/*1*/
 insert into SERIE (ID, NAME)
 values (nextval('SERIE_SEQ'), 'Anderland');/*2*/
 
-
-
-
 insert into AUTHOR (ID, NAME)
 values (nextval('AUTHOR_SEQ'), 'Margaret Atwood'); /*1*/
 
@@ -44,6 +53,10 @@ values (nextval('AUTHOR_SEQ'), 'Ralph Johnson'); /*5*/
 
 insert into AUTHOR (ID, NAME)
 values (nextval('AUTHOR_SEQ'), 'John Vlissides'); /*6*/
+
+
+insert into BOOK_USER_REVIEW (ID, DATE, REVIEW, BOOK_ID, USER_ID)
+values (nextval('BOOK_USER_REVIEW_SEQ'), current_date, 'review1', 1, 1);
 
 
 insert into BOOK_AUTHORS (BOOKS_ID, AUTHORS_ID)
@@ -77,17 +90,5 @@ values (nextval('GENRE_SEQ'), 'non-fiction');
 insert into GENRE
     (ID, NAME)
 values (nextval('GENRE_SEQ'), 'programming');
-
-INSERT INTO BOOKSUSER (ID, USERNAME, PASSWORD, ROLE)
-VALUES (nextval('USER_SEQ'), 'admin',
-        '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS', 'ADMIN'); --admin
-
-INSERT INTO BOOKSUSER (ID, USERNAME, PASSWORD, ROLE)
-VALUES (nextval('USER_SEQ'), 'marie',
-        '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm', 'USER'); --password
-
-INSERT INTO BOOKSUSER (ID, USERNAME, PASSWORD, ROLE)
-VALUES (nextval('USER_SEQ'), 'vera',
-        '$2y$12$KF3spKP4kgf59.6zYkmjyeYaW2.4ZxV16Grpw1FPsFnzYq68kswJ6', 'USER'); --vera
 
 
